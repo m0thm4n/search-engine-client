@@ -70,14 +70,14 @@
 
       function appendToResults(resultsContainer, page) {
         for (let i = 0; i < $(resultsContainer); i++) {
-          if $(resultsContainer)[i].includes(page.title) {
-            continue;
-          } else {
+          if !$(resultsContainer)[i].includes(page.title) {
             $(resultsContainer).append(
               '<div class="row"><div class="col-12"><h4 class="mb-0">' + page.title +
               '</h4><a href="' + page.url + '">' + page.url + '</a><p class="mb-0">'
               + page.description + '</p></div></div><hr>'
             );
+          } else {
+            continue;
           }
         }
       }
