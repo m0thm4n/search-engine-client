@@ -69,6 +69,7 @@
       }
 
       function appendToResults(resultsContainer, page) {
+        print($(resultsContainer))
         $(resultsContainer).append(
           '<div class="row"><div class="col-12"><h4 class="mb-0">' + page.title +
           '</h4><a href="' + page.url + '">' + page.url + '</a><p class="mb-0">'
